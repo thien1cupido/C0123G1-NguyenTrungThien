@@ -1,0 +1,17 @@
+BEGIN
+	INPUT N: a1,a2,a3,…an 
+	a1=max
+	i=2
+	While (i>N)
+	DO
+		IF i>N
+		DISPLAY max
+		ELSE
+			IF ai>max
+				max=ai
+				i=i+1
+			ELSE I=I+1
+			END IF
+		END IF
+	END DO
+END.
