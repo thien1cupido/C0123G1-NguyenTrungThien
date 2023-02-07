@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo form đơn giản</title>
+    <style>
+        .head-title {
+            text-align: center;
+            background-color: red;
+            color: ghostwhite;
+        }
+        .f-one{
+            margin: auto;
+            width: 500px;
+            text-align: center;
+        }
+        .tb-input{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="f-one">
+        <form>
+            <fieldset>
+                <h1 class="head-title">SỞ THÍCH CỦA BẠN</h1>
+                <label for="yourname"class="tb-input">Họ và tên</label>
+                <input id="yourname" type="text" name="yourname" />
+                <br>
+                <label for="email" class="tb-input">Email</label>
+                <input id="email" type="email" name="email"/>
+                <br>
+                <label for="hobby" class="tb-input">Sở thích</label>
+                <div style="color: orange">
+                <input id="hobby" type="checkbox"  name="hobby" /> Thể thao
+                <input id="hobby" type="checkbox"  name="hobby" /> Âm nhạc
+                <input id="hobby" type="checkbox"  name="hobby" /> Đọc sách<br/>
+                <input id="hobby" type="checkbox"  name="hobby" /> Lướt web
+                <input id="hobby" type="checkbox"  name="hobby" /> Chơi game
+                <input id="hobby" type="checkbox"  name="hobby" /> Điện ảnh<br/>
+                <input id="hobby" type="checkbox"  name="hobby" /> Du lịch</div>
+                <br/>
+                <button type="submit">Gửi thông tin</button>
+                <button type="reset">Nhập lại</button>
+            </fieldset>
+        </form>
+    </div>
+    <div style="width: 600px;margin: auto;background-color: beige">
+        <form>
+            <fieldset>
+                <h1 STYLE="color: blue;background-color: aquamarine">ĐĂNG KÝ HỌC VIÊN</h1>
+                <label for="yourname"class="tb-input">Họ và tên</label>
+                <input id="yourname" type="text" name="yourname" />
+                <br>
+                <label for="birth" class="tb-input">Ngày sinh</label>
+                <input id="birth" type="text" name="birth"/>
+                <br>
+                <label for="gender" class="tb-input">Giới tính</label>
+                <input id="gender" type="radio" name="gender">Nam
+                <input id="gender" type="radio" name="gender">Nữ
+                <br/>
+                <label for="address" class="tb-input" style="margin-top: 10px;height: 40px">Địa chỉ</label>
+                <input id="address" name="address" type="text">
+                <br>
+                <lable for="cl"class="tb-input">Lớp</lable>
+                <select >
+                    <option id="cl" name="cl" value="opcl">-chọn lớp-</option>
+                </select><br/>
+                <label for="email" class="tb-input">Email</label>
+                <input id="email" type="email" name="email"/>
+                <br>
+                <label for="phonenumber"class="tb-input">Số điện thoại</label>
+                <input id="phonenumber" name="phonenumber" type="text">
+                <br/>
+                <button type="submit">Đăng ký</button>
+                <button type="reset">Nhập lại</button>
+            </fieldset>
+        </form>
+    </div>
+
+</body>
+</html>

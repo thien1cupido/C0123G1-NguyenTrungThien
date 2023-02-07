@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo form lấy survey khach hang</title>
+    <style>
+        .tble{
+            text-align: center;
+            border-collapse: collapse;
+        }
+        tr:nth-last-child(even){
+            background-color: ghostwhite;
+        }
+    </style>
+</head>
+<body>
+<form>
+<h1>Maket Research Survey</h1>
+<p>Please take a few moments to complete this saticfaction survey</p><br/>
+<b>What is your age range?<br/>
+<select name="old">
+    <option value="one">18-24</option>
+    <option value="two">25-34</option>
+    <option value="three">35-50</option>
+    <option value="four">50+</option>
+</select><br/>
+<b>What is your yearly income range?</b><br/>
+<select>
+    <option>&dollar;-&dollar;25,000</option>
+    <option>&dollar;25,001-&dollar;50,000</option>
+    <option>&dollar;50,001-&dollar;100,000</option>
+    <option>&dollar;100,0000+</option>
+</select>
+    <br>
+<b>Gender Identity</b><br/>
+    <input name="gender" value="gender" type="radio" /> Male <br>
+    <input name="gender" value="gender" type="radio" /> Female <br>
+
+<b>Which of the following products have your purchased in the last 2 months.Please check all that apply.</b><br/>
+    <input name="product" value="product" type="checkbox"/> Product 1 <br/>
+    <input name="product" value="product" type="checkbox"/> Product 2 <br/>
+    <input name="product" value="product" type="checkbox"/> Product 3 <br/>
+
+<b>How often would you use our product ?</b><br/>
+    <input name="often" value="often" type="radio" checked/> Daily <br/>
+    <input name="often" value="often" type="radio" checked/> Weekly <br/>
+    <input name="often" value="often" type="radio" checked/> Monthly <br/>
+<b>What would you pay for the new product ?</b><br>
+$<input type="number" value="dollars" name="dollars" style="size: 10px">
+.<input type="number" value="cent" name="cent" style="size: 5px"><br/>
+<b>What feature would you like to see in the new product</b><br/>
+<textarea cols="40"rows="10"></textarea><br/>
+<b> Pleae rate your level of agreement with the following statements.</b>
+<table border="1" class="tble">
+    <tr>
+        <th> </th>
+        <th>Strongly Disagree</th>
+        <th>Disagree</th>
+        <th>Agree</th>
+        <th>Strongly Agree</th>
+    </tr>
+    <tr>
+        <td>Our products are priced fairy</td>
+        <td><input type="radio">1</td>
+        <td><input type="radio">2</td>
+        <td><input type="radio">3</td>
+        <td><input type="radio">4</td>
+    </tr>
+    <tr>
+        <td>Our products are high quality</td>
+        <td><input type="radio">1</td>
+        <td><input type="radio">2</td>
+        <td><input type="radio">3</td>
+        <td><input type="radio">4</td>
+    </tr>
+            <tr>
+                <td>You would recommend our product to a friend or </td>
+                 <td><input type="radio">1</td>
+                 <td><input type="radio">2</td>
+                 <td><input type="radio">3</td>
+                 <td><input type="radio">4</td>
+            </tr>
+
+        </table><br/>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>
