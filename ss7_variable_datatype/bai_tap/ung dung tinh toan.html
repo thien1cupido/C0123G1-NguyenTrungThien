@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tao ung dung tinh toan</title>
+</head>
+<body>
+<form>
+    <label for="firtnumb"></label>
+    <input id="firtnumb" type="number">
+    <label for="seconnumb"></label>
+    <input id="seconnumb" type="number">
+    <br>
+    <button type="button" onclick="mathAdd()">Addition(+)</button>
+    <button type="button" onclick="mathSub()">Subtraction(-)</button>
+    <button type="button" onclick="mathMulti()">Multiplication(x)</button>
+    <button type="button" onclick="mathDiv()">Divison(/)</button>
+    <p id="Result"></p>
+</form>
+</body>
+<script>
+    function mathAdd() {
+        let a = document.getElementById("firtnumb").value;
+        let b = document.getElementById("seconnumb").value;
+        document.getElementById("Result").innerHTML= Number(a) + Number(b);
+    }
+    function mathSub() {
+        let a=document.getElementById("firtnumb").value;
+        let b=document.getElementById("seconnumb").value;
+        document.getElementById("Result").innerHTML= Number(a) + Number(b);
+    }
+    function mathMulti() {
+        let a=document.getElementById("firtnumb").value;
+        let b=document.getElementById("seconnumb").value;
+        document.getElementById("Result").innerHTML= Number(a) * Number(b);
+    }
+    function mathDiv() {
+        let a=document.getElementById("firtnumb").value;
+        let b=document.getElementById("seconnumb").value;
+        document.getElementById("Result").innerHTML= Number(a) / Number(b);
+    }
+</script>
+</html>
