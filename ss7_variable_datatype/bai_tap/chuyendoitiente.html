@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+</head>
+<body>
+<form>
+    <div class="hhead">
+        <h3>Amount</h3>
+        <h3>From Currency</h3>
+        <h3 style="margin-right: 20px">To Currency</h3>
+    </div>
+    <div class="tb-input">
+        <label for="amount"></label>
+        <input type="text" id="amount">
+        <select id="from" style="size: 30px">
+            <option value="VND">VietNam</option>
+            <option value="USD">USD</option>
+        </select>
+        <select id="to" style="size: 40px">
+            <option value="VND">VietNam</option>
+            <option value="USD">USD</option>
+        </select>
+        <button type="button" onclick="converMoney()">Convert</button>
+    </div>
+</form>
+<p id="Result" style="color: blue"></p>
+</body>
+</html>
+<style>
+    .hhead{
+        margin-left: 150px;
+        width: 500px;
+        display:flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .tb-input{
+        width: 800px;
+        display:flex;
+        justify-content: space-around;
+    }
+</style>
+<script>
+    function converMoney() {
+        let amount=document.getElementById("amount").value;
+        let from=document.getElementById("from").value;
+        let to=document.getElementById("to").value;
+        let result;
+        if (from === "USD" && to === "VND") {
+            result = "Result: " + (amount * 23000) + " Đ";
+        }
+        else if (from === "VND"&& to ==="USD"){
+            result = "Result: "+ (amount / 23000) + " $";
+        }
+        else if (from === "VND") {
+            result = "Result: " + amount + " VNĐ"
+        } else {
+            result = "Result: " + amount + " $"
+        }
+        document.getElementById("Result").innerText = result;
+    }
+</script>
