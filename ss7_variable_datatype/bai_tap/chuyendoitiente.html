@@ -14,10 +14,12 @@
     <div class="tb-input">
         <label for="amount"></label>
         <input type="text" id="amount">
+        <label for="from"></label>
         <select id="from" style="size: 30px">
             <option value="VND">VietNam</option>
             <option value="USD">USD</option>
         </select>
+        <label for="to"></label>
         <select id="to" style="size: 40px">
             <option value="VND">VietNam</option>
             <option value="USD">USD</option>
@@ -59,6 +61,6 @@
         } else {
             result = "Result: " + amount + " $"
         }
-        document.getElementById("Result").innerText = result;
+        document.getElementById("Result").innerHTML = result;
     }
 </script>
