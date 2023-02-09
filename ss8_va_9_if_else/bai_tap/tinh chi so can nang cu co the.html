@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính chỉ số cân nặng của cơ thể</title>
+</head>
+<body>
+<h1 style="text-align: center"> TÍNH CHỈ SỐ CÂN NẶNG CỦA CƠ THỂ</h1>
+<form>
+    <div style="text-align: center">
+        <label for="height">Chiều cao</label>
+        <input id="height" type="number" style="margin-bottom: 10px"><br>
+        <label for="wieght">Cân nặng</label>
+        <input id="wieght" type="number" style="margin-bottom: 10px"><br>
+        <button type="button" onclick="bmi()">Kiểm tra</button>
+        <button type="reset">Nhập lại</button>
+        <p id="Result" style="font-size: 20px;color: red;text-align: center"></p>
+    </div>
+</form>
+</body>
+<script>
+    function bmi() {
+        let h = document.getElementById("height").value;
+        let w = document.getElementById("wieght").value;
+        let result = Number(w)/(Math.pow(Number(h),2));
+
+        if (result <18.5){
+            document.getElementById("Result").innerHTML= "Chỉ số BMI la " + result + " Underweight";
+             }
+        else if (result < 25.0) {
+            document.getElementById("Result").innerHTML= "Chỉ số BMI la " + result + " Normal";
+
+            }
+            else if(result < 30.0){
+                document.getElementById("Result").innerHTML="Chỉ số BMI la " + result + " Overweight";
+                }
+                else {
+                document.getElementById("Result").innerHTML="Chỉ số BMI la " + result + "Obese";
+                }
+            }
+</script>
+</html>
