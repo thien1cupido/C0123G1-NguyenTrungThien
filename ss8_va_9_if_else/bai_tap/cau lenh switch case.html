@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu lệnh switch case</title>
+</head>
+<body>
+<h1 style="text-align: center">CẬU LỆNH SWITCH CASE</h1>
+<form>
+        <div style="text-align: center">
+            <label for="month">Tháng</label>
+            <input id="month" type="number" style="margin-bottom: 10px"><br>
+            <button type="button" onclick="tinhMonth()">Kiểm tra</button>
+            <button type="reset">Nhập lại</button>
+            <p id="Result" style="font-size: 20px;color: red;text-align: center"></p>
+        </div>
+</form>
+</body>
+<script>
+    function tinhMonth() {
+        let result = document.getElementById("month").value;
+        let thang1="1";
+        let thang2="2";
+        let thang3="3";
+        let thang4="4";
+        let thang5="5";
+        let thang6="6;"
+        let thang7="7";
+        let thang8="8";
+        let thang9="9";
+        let thang10="10";
+        let thang11="11";
+        let thang12="12";
+
+        switch (result) {
+            case thang1:
+            case thang3:
+            case thang5:
+            case thang7:
+            case thang8:
+            case thang10:
+            case thang12:
+                document.getElementById("Result").innerHTML="Tháng " + result +" có 31 ngày"
+                break;
+            case thang4:
+            case thang6:
+            case thang9:
+            case thang11:
+                document.getElementById("Result").innerHTML="Tháng " + result+ " có 30 ngày"
+                break;
+            case thang2:
+                document.getElementById("Result").innerHTML="Tháng " + result +" có 28 hoặc ngày"
+                break;
+            default:
+                document.getElementById("Result").innerHTML="Không có tháng " + result + ", vui lòng nhập lại"
+                break;
+        }
+    }
+</script>
+</html>
