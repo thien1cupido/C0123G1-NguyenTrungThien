@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 2</title>
+</head>
+<body>
+<h2 style="text-align: center">Bài 2 in ra màn hình từ 1 đến 5</h2>
+<div style="text-align: center">
+    <label for="nhapN" >Nhập n</label>
+    <input id="nhapN" type="number">
+    <button type="button" onclick="tongNhapVao()" >Tính</button>
+</div>
+<p id="ketQua" style="text-align: center"></p>
+<script>
+    function tongNhapVao() {
+        let number = +document.getElementById("nhapN").value;
+        let total=0;
+        let i;
+        for (i=1; i <= number; i++) {
+            total = total+ i;
+        }
+        document.getElementById("ketQua").innerHTML = "Tổng từ 1 đến "+ number +" là "+ total;
+    }
+</script>
+</body>
+</html>
