@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai3</title>
+</head>
+<h1>Bài 3</h1>
+<body>
+<script>
+    let firtNumber=0;
+    let secondNumber=1;
+    document.write("Dãy 20 số đầu của fibonacci là ");
+    for (let counter=0;counter<20;counter++) {
+        document.write( firtNumber+ ", ");
+        let nextNumber = firtNumber + secondNumber;
+        firtNumber = secondNumber;
+        secondNumber = nextNumber;
+    }
+</script>
+</body>
+</html>

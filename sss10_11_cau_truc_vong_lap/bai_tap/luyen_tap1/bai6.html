@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai6</title>
+</head>
+<body>
+<h1>30 số chia hết cho 7</h1>
+<script>
+    let i = 1;
+    let counter = 0;
+    let sum=0;
+    // document.write("Dãy số chia hết cho 7 là ");
+    while (counter < 30) {
+        if (i % 7 === 0) {
+            // document.write(i +", ");
+            counter++;
+            sum=sum+i;
+        }
+        i++;
+    }
+    document.write("Tổng số chia hết cho 7 là "+sum);
+</script>
+</body>
+</html>
