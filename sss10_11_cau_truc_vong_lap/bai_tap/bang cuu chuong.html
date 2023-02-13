@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai tap bang cuu chuong</title>
+</head>
+<body>
+<h1 style="text-align: center">Bảng cửu chương</h1>
+<script>
+    let sout, i, j;
+    sout = "<table border='1' width='800' cellspacing='2' cellpadding='3' style='margin: auto;text-align: center'>";
+    i = 1;
+    j = 2;
+    while (i <= 10) {
+        sout = sout + "<tr>";
+        while (j <= 9) {
+            sout = sout + "<td>" +j+ "x" + i +"=" + i * j + "</td>";
+            j++;
+        }
+        sout = sout + "</tr>";
+        j = 2;
+        i++;
+    }
+    sout = sout + "</table>";
+    document.write(sout);
+</script>
+</body>
+</html>
