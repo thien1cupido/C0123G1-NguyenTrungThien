@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 2</title>
+</head>
+<body>
+<h1 style="text-align: center">Tính giai thừa</h1>
+<div style="text-align: center">
+    <label for="numberInteger">Nhập số</label>
+    <input id="numberInteger" type="number">
+    <button type="button" onclick="factorial()">Tính</button>
+</div>
+<p id="result" style="text-align: center;color: red"></p>
+</body>
+</html>
+<script>
+    function factorial() {
+        let inputNumber=+document.getElementById("numberInteger").value;
+        let total=1;
+        for (let i=1;i<=inputNumber;i++){
+            total=total*i;
+    }
+    document.getElementById("result").innerHTML="Kết quả: !"+inputNumber+"= "+total;
+    }
+</script>
