@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lt1-bai3</title>
+</head>
+<body>
+<script>
+    let numbers=[5,7,12,5,8,9,45,2,36,10,2];
+    let max = numbers[0];
+    let index=0;
+    let sum=0;
+    for (let i = 1; i < numbers.length; i++) {
+        index=i;
+        sum=sum+numbers[i];
+        if (numbers[i] > max) {
+            max = numbers[i];
+
+        }
+    }
+    document.write("Số lớn nhất là "+ max+ " .Trung bình của mảng là "+ sum/(index+1));
+</script>
+</body>
+</html>

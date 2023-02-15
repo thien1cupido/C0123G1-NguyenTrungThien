@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai6-lt</title>
+</head>
+<body>
+<script>
+    let numbers = [0, 1, 2, 3, 4, 6, 7, 8, 9];
+    let v = +prompt("nhap phan tu V :");
+    let count = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        if (v === numbers[i]) {
+            count++;
+            document.write("V is in the array");
+        }
+    }
+    if (count === 0) {
+        document.write("V is not in the array");
+    }
+</script>
+</body>
+</html>

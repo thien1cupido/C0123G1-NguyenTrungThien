@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Các câu lệnh cơ bản của mảng</title>
+</head>
+<body>
+<h1 style="text-align: center">Các câu cơ bảng của mảng</h1>
+<div style="text-align: center">
+    <label for="inputNumber">Nhập số</label>
+    <input id="inputNumber" type="text">
+    <button type="button" onclick="connectDivisableByTwo()">In</button>
+</div>
+<p id="result" style="text-align: center"></p>
+</body>
+</html>
+//Bai1
+<script>
+    myColor = ["Red", "Green", "White", "Black"];
+    console.log(myColor.toString());
+    console.log(myColor.join('+'));
+</script>
+//Bai2
+<script>
+    function connectDivisableByTwo(){
+        let number = document.getElementById("inputString").value;
+        let convertTS = number.toString();
+        let stringArray = [convertTS[0]];
+
+        for (let i = 1; i < convertTS.length; i++) {
+            if ((convertTS[i - 1] % 2 === 0) && (convertTS[i] % 2 === 0)) {
+                stringArray.push("-", convertTS[i]);
+            } else {
+                stringArray.push(convertTS[i]);
+            }
+        }
+        document.getElementById("result").innerHTML="Dãy số vừa nhập "+ stringArray.join("")
+    }
+</script>
+<script>
+    let strings = '';
+    let cap = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let lock = 'abcdefghijklmnopqrstuvwxyz';
+    let result = [];
+
+    for(let i=0; i<strings.length; i++)
+    {
+        if(cap.indexOf(strings[i]) !== -1)
+        {
+            result.push(strings[i].toLowerCase());
+        }
+        else if(lock.indexOf(strings[i]) !== -1)
+        {
+            result.push(strings[i].toUpperCase());
+        }
+        else
+        {
+            result.push(strings[i]);
+        }
+    }
+    console.log(result.join(''));
+</script>

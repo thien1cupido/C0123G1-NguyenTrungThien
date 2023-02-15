@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai8-lt</title>
+</head>
+<body>
+<script>
+    let arr = [4, 7, 8, 0, -7, 9, 34, 9, 23, -12]
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = i + 1; j < arr.length; j++) {
+            if (arr[j] > arr[i]) {
+                let x = arr[i];
+                arr[i] = arr[j];
+                arr[j] = x;
+            }
+        }
+    }
+    document.write(arr);
+</script>
+</body>
+</html>
