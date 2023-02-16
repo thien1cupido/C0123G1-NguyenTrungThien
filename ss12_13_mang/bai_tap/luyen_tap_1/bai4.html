@@ -5,15 +5,13 @@
     <title>Bai4-lt1</title>
 </head>
 <body>
+<script>
+    const array = [23, -7, 23, 26, 51,7, -2];
+    let array2 = [];
+    for (let i = array.length - 1; i >= 0; i--) {
+        array2.push(array[i]);
+    }
+    document.write("Mảng đã đảo:  " + array2);
+</script>
 </body>
 </html>
-<script>
-    let a=prompt("Nhập vào các từ");
-    let count=0;
-    let space=" ";
-    for (let i=0;i<a.length;i++){
-        if (space=== a[i]){
-            count++;
-        }
-    }document.write("Số từ trong 1 chuỗi là "+(count+1));
-</script>
