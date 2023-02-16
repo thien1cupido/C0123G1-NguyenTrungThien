@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai6-lt2</title>
+</head>
+<body>
+<script>
+    let a = prompt("Nhập chuỗi");
+    b = [];
+    let character1 = "-";
+    let character2 = "_";
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] === character1) {
+            b.push(character2);
+        } else {
+            b.push(a[i]);
+        }
+    }
+    document.write("Chuỗi được thay thế là " + b.join(""));
+</script>
+</body>
+</html>

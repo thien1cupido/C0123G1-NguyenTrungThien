@@ -8,18 +8,12 @@
 </body>
 </html>
 <script>
-    let numbers = [];
-    for(let i = 0; i < 5; i++){
-        numbers[i] = +prompt("nhap phan tu :");
-    }
-    let first = 0;
-    let last = numbers.length - 1;
-    while (first < last) {
-        let convert = numbers[first];
-        numbers[first] = numbers[last];
-        numbers[last] = convert;
-        first++;
-        last--;
-    }
-    document.write(numbers);
+    let a=prompt("Nhập vào các từ");
+    let count=0;
+    let space=" ";
+    for (let i=0;i<a.length;i++){
+        if (space=== a[i]){
+            count++;
+        }
+    }document.write("Số từ trong 1 chuỗi là "+(count+1));
 </script>
