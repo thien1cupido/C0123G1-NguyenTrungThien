@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai3-lt2</title>
+</head>
+<body>
+<label for="inputNumber">Nhập số</label>
+<input id="inputNumber" name="number" type="number">
+<button type="button" onclick="calulate()">Tính</button>
+<p id="result" style="text-align: center"></p>
+</body>
+</html>
+<script>
+    function calulate() {
+        let inputNum = +document.getElementById("inputNumber").value;
+        let result1 = square(inputNum);
+        console.log(result1);
+        document.getElementById("result").innerHTML ="Bình phương của " + inputNum+" là "+ result1;
+    }
+</script>
+<script src="luyentap2.js"></script>

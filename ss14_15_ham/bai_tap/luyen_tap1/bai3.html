@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3-lt1</title>
+</head>
+<body>
+<label for="inputNumber1">Số thứ nhất</label>
+<input id="inputNumber1" type="number"><br>
+<label for="inputNumber2">Số thứ hai</label>
+<input id="inputNumber2" type="number">
+<button type="button" onclick="increaseNumbericValue()">Nhấn vào</button>
+<p id="result"></p>
+</body>
+</html>
+<script>
+    function increaseNumbericValue(numberA, numberB) {
+        numberA = +document.getElementById("inputNumber1").value;
+        numberB = +document.getElementById("inputNumber2").value;
+        total = numberA + numberB;
+        if (numberA > numberB) {
+            alert("Số " + numberA + " lớn hơn " + numberB);
+        } else {
+            return document.getElementById("result").innerHTML = "Tổng của 2 số là " + total;
+        }
+    }
+</script>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai2-lt2</title>
+</head>
+<body>
+<label for="inputNumber">Nhập bán kính hình tròn</label>
+<input id="inputNumber" name="number" type="number">
+<button type="button" onclick="circleAreaAndDiameter()">Tính</button>
+<p id="result" style="text-align: center"></p>
+</body>
+</html>
+<script>
+    function circleAreaAndDiameter() {
+        let input = +document.getElementById("inputNumber").value;
+        let result1 = circleArea(input);
+        let result2 = diameterOfCircle(input);
+        document.getElementById("result").innerHTML = "Diện tích hình tròn là "+ result1+ "<br> " + "Chu vi hình tròn "+ result2;
+    }
+</script>
+<script src="luyentap2.js"></script>

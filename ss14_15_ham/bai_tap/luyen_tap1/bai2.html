@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2-lt1</title>
+</head>
+<body>
+<label for="input">Nhập số</label>
+<input id="input" type="number">
+<button type="button" onclick="increaseNumbericValue()">Nhấn vào</button>
+<p id="result"></p>
+</body>
+</html>
+<script>
+    function increaseNumbericValue(inputA) {
+        inputA= +document.getElementById("input").value;
+        inputA+=1;
+        return document.getElementById("result").innerHTML= "Giá trị đã được tăng "+inputA;
+    }
+</script>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5-lt1</title>
+</head>
+<body>
+<button type="button" onclick="findStar()">Find</button>
+<script>
+    function findStar() {
+        let star = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let constellation = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+        let inputNameStar = prompt("Nhập vào tên của ngôi sao");
+        let count = 0;
+        let find = "";
+        for (let i = 0; i < star.length; i++) {
+            if (star[i] === inputNameStar) {
+                find = constellation[i];
+                count += 1;
+            }
+        }
+        if (count !== 1) {
+            alert("Không tìm thấy sao");
+        } else {
+            document.getElementById("result").innerHTML = "Chòm sao tương ứng " + find;
+        }
+    }
+</script>
+<p id="result" style="text-align: center"></p>
+</body>
+</html>
