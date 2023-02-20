@@ -5,18 +5,21 @@
     <title>Bai2-lt2</title>
 </head>
 <body>
-<label for="inputNumber">Nhập bán kính hình tròn</label>
-<input id="inputNumber" name="number" type="number">
-<button type="button" onclick="circleAreaAndDiameter()">Tính</button>
-<p id="result" style="text-align: center"></p>
+<h1 style="text-align: center">Bài 2 luyện tập 2</h1>
+<div style="text-align: center">
+    <label for="inputNumber">Nhập bán kính hình tròn</label>
+    <input id="inputNumber" name="number" type="number">
+    <button type="button" onclick="circleAreaAndDiameter()">Tính</button>
+    <p id="result"></p>
+</div>
 </body>
 </html>
 <script>
     function circleAreaAndDiameter() {
         let input = +document.getElementById("inputNumber").value;
-        let result1 = circleArea(input);
-        let result2 = diameterOfCircle(input);
-        document.getElementById("result").innerHTML = "Diện tích hình tròn là "+ result1+ "<br> " + "Chu vi hình tròn "+ result2;
+        let result1 = getCircleArea(input);
+        let result2 = getDiameterOfCircle(input);
+        document.getElementById("result").innerHTML = "Diện tích hình tròn là " + result1 + "<br> " + "Chu vi hình tròn " + result2;
     }
 </script>
 <script src="luyentap2.js"></script>

@@ -5,18 +5,20 @@
     <title>Bai3-lt2</title>
 </head>
 <body>
-<label for="inputNumber">Nhập số</label>
-<input id="inputNumber" name="number" type="number">
-<button type="button" onclick="calulate()">Tính</button>
-<p id="result" style="text-align: center"></p>
+<h1 style="text-align: center">Bài 3 luyện tập 2</h1>
+<div style="text-align: center">
+    <label for="input">Nhập số</label>
+    <input id="input" type="number">
+    <button type="button" onclick="calulate3()">Tính</button>
+    <p id="result"></p>
+</div>
 </body>
 </html>
 <script>
-    function calulate() {
-        let inputNum = +document.getElementById("inputNumber").value;
-        let result1 = square(inputNum);
-        console.log(result1);
-        document.getElementById("result").innerHTML ="Bình phương của " + inputNum+" là "+ result1;
+    function calulate3() {
+        let inputNumber = +document.getElementById("input").value;
+        let result = getFactorial(inputNumber);
+        document.getElementById("result").innerHTML = "Giai thừa của " + inputNumber + " là " + result;
     }
 </script>
 <script src="luyentap2.js"></script>

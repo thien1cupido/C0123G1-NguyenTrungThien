@@ -5,18 +5,21 @@
     <title>Bai1-lt2</title>
 </head>
 <body>
-<label for="inputNumber">Nhập số</label>
-<input id="inputNumber" name="number" type="number">
-<button type="button" onclick="calulate()">Tính</button>
-<p id="result" style="text-align: center"></p>
+<h1 style="text-align: center">Bài 1 luyện tập 2</h1>
+<div style="text-align: center">
+    <label for="inputNumber">Nhập số</label>
+    <input id="inputNumber" name="number" type="number">
+    <button type="button" onclick="calulate1()">Tính</button>
+    <p id="result"></p>
+</div>
 </body>
 </html>
 <script>
-    function calulate() {
+    function calulate1() {
         let inputNum = +document.getElementById("inputNumber").value;
-        let result1 = square(inputNum);
+        let result1 = getSquare(inputNum);
         console.log(result1);
-        document.getElementById("result").innerHTML ="Bình phương của " + inputNum+" là "+ result1;
+        document.getElementById("result").innerHTML = "Bình phương của " + inputNum + " là " + result1;
     }
 </script>
 <script src="luyentap2.js"></script>

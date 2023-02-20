@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai9-lt2</title>
+</head>
+<body>
+<h1 style="text-align: center">Bài 9 luyện tập 2</h1>
+<div style="text-align: center">
+    <label for="input1">Nhập mảng ký tự </label>
+    <input id="input1" style="width: 90px" type="text"><br>
+    <label for="input2">Nhập ký tự</label>
+    <input id="input2" style="margin-top: 10px;width: 30px " type="text"><br>
+    <button type="button" style="margin-top: 10px;margin-left: 55px" onclick="calulate9()">Kiểm tra</button>
+    <p id="result"></p>
+</div>
+</body>
+</html>
+<script>
+    function calulate9() {
+        let inputArray1 = document.getElementById("input1").value;
+        let inputArray2= document.getElementById("input2").value;
+        document.getElementById("result").innerHTML = checkCharacterInArray(inputArray1,inputArray2);
+    }
+</script>
+<script src="luyentap2.js"></script>

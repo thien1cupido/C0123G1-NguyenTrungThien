@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai5-lt2</title>
+</head>
+<style>
+    input {
+        width: 60px;
+    }
+</style>
+<body>
+<h1 style="text-align: center">Bài 6 luyện tập 2</h1>
+<div style="text-align: center">
+    <label for="input1">Nhập số 1</label>
+    <input id="input1" type="text"><br>
+    <button type="button" style="margin-top: 10px;margin-left: 65px" onclick="calulate6()">Kiểm tra</button>
+    <p id="result"></p>
+</div>
+</body>
+</html>
+<script>
+    function calulate6() {
+        let inputNumber = +document.getElementById("input1").value;
+        document.getElementById("result").innerHTML = checkForPositiveIntegers(inputNumber);
+    }
+</script>
+<script src="luyentap2.js"></script>

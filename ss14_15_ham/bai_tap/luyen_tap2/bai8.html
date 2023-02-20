@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai8-lt2</title>
+</head>
+<style>
+    input {
+        width: 60px;
+    }
+</style>
+<body>
+<h1 style="text-align: center">Bài 8 luyện tập 2</h1>
+<div style="text-align: center">
+    <label for="input1">Nhập </label>
+    <input id="input1" type="text"><br>
+    <button type="button" style="margin-top: 10px;margin-left: 55px" onclick="calulate8()">Kiểm tra</button>
+    <p id="result"></p>
+</div>
+</body>
+</html>
+<script>
+    function calulate8() {
+        let inputNumberInteger = reverseArray(document.getElementById("input1").value);
+        document.getElementById("result").innerHTML = "Phần tử trong mảng đã được đảo " + inputNumberInteger;
+    }
+</script>
+<script src="luyentap2.js"></script>
+<script>
+    //cách 2
+    // let arrayNumberInteger = [];
+    // for (let i = inputNumberInteger.length - 1; i >= 0; i--) {A
+    //     arrayNumberInteger.push(inputNumberInteger[i]);
+    // }
+    // document.getElementById("result").innerHTML ="Phần tử trong mảng đã được đảo "+ arrayNumberInteger.join("");
+</script>

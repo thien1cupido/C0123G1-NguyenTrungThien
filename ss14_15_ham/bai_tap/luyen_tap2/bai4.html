@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai4-lt2</title>
+</head>
+<body>
+<h1 style="text-align: center">Bài 4 luyện tập 2</h1>
+<div style="text-align: center">
+    <label for="input">Nhập</label>
+    <input id="input" type="text">
+    <button type="button" onclick="calulate4()">Kiểm tra</button>
+    <p id="result"></p>
+</div>
+</body>
+</html>
+<script>
+    function calulate4() {
+        let inputNumber = +document.getElementById("input").value;
+        document.getElementById("result").innerHTML = checkIsNumber(inputNumber);
+    }
+</script>
+<script src="luyentap2.js"></script>
