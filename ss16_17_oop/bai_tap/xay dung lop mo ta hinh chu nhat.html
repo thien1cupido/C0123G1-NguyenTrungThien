@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mô tả hình chữ nhật</title>
+</head>
+<body>
+<canvas id="printRectangle" width="600px" height="500px"></canvas>
+<script>
+    class Rectangle {
+        constructor(heigth, wide) {
+            this.heigthRectangle = heigth;
+            this.wideRectangle = wide;
+        }
+
+        getHeigth() {
+            return this.heigthRectangle;
+        }
+
+        getWide() {
+            return this.wideRectangle;
+        }
+
+        getAcreage() {
+            return this.heigthRectangle * this.wideRectangle;
+        }
+
+        getPerimeter() {
+            return (this.heigthRectangle + this.wideRectangle) * 2;
+        }
+
+        setWide(wide) {
+            this.wideRectangle = wide;
+        }
+
+        setHeigth(heigth) {
+            this.heigthRectangle = heigth;
+        }
+    }
+
+    let myRectangle = new Rectangle(150, 50);
+    myRectangle.setHeigth(+prompt("Nhập chiều rộng chữ nhật"));
+    myRectangle.setWide(+prompt("Nhập chiều dài chữ nhật"));
+    let c = document.getElementById("printRectangle");
+    let ctx = c.getContext("2d");
+    ctx.fillStyle = "#FF0000";
+    ctx.fillRect(20, 20, myRectangle.getWide(), myRectangle.getHeigth());
+    document.write("Chu vi hình chữ nhật là " + myRectangle.getPerimeter());
+    document.write(", Diện tích hình chữ nhật là " + myRectangle.getAcreage());
+</script>
+</body>
+</html>

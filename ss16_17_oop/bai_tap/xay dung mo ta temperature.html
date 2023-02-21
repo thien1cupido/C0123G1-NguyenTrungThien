@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(temperatureC) {
+            this.temperatureC = temperatureC;
+        }
+
+        setTemperatureC(temperatureC) {
+                return this.temperatureC = temperatureC;
+        }
+
+        getConvertF() {
+            return 9 / 5 * this.temperatureC + 32;
+        }
+
+        getConvertK() {
+            return this.temperatureC + 273.15;
+        }
+    }
+
+    let currentTemperature = new Temperature(25);
+    document.write(currentTemperature.temperatureC+ " độ C = " +currentTemperature.getConvertF()+" độ F");
+    document.write("<br>");
+    document.write(currentTemperature.temperatureC+ " độ C = " +currentTemperature.getConvertK()+" độ K");
+    // if (currentTemperature.setTemperatureC(+prompt("Nhập nhiệt độ C"))>-273){
+    // document.write(currentTemperature.temperatureC+ " độ C = " +currentTemperature.getConvertF()+" độ F");
+    // document.write("<br>");
+    // document.write(currentTemperature.temperatureC+ " độ C = " +currentTemperature.getConvertK()+" độ K");
+    // }else {
+    //     document.write("Nhập sai độ C, xin mời nhập lại");
+    // }
+</script>
+</body>
+</html>
