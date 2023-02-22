@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ung dung mo phong cau chuyen Adam va Eva</title>
+</head>
+<body>
+<button type="button" onclick="displayEating()">Ăn</button>
+<p id="result"></p>
+</body>
+</html>
+<script>
+    class Apple {
+        constructor(weight) {
+            this.weight = weight;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        setWeight(weight) {
+            this.weight = weight;
+        }
+
+        getAppleIsEaten() {
+            this.weight -= 1;
+        }
+    }
+
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        getGender() {
+            return this.gender;
+        }
+
+        setGender(gender) {
+            this.gender = gender;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        setWeight(weight) {
+            this.weight = weight;
+        }
+
+        say() {
+            document.write("hello");
+        }
+
+        checkApple(apple) {
+            return console.log(this.getWeigth());
+        }
+
+        eatApple(apple) {
+            if (apple.getWeight() > 0) {
+                apple.getAppleIsEaten();
+                this.weight += 1;
+            } else {
+                alert("Táo đã ăn hết");
+            }
+        }
+    }
+
+    let apple1 = new Apple(10);
+    let adam = new Human("Adam", "Nam", 75);
+    let eva = new Human("Eva", "Nu", 65);
+
+    function displayEating() {
+        if (apple1.getWeight() % 2 === 0) {
+            adam.eatApple(apple1);
+            document.getElementById("result").innerHTML = "Quả táo còn: " + apple1.getWeight() + " đơn vị" + "<br>" +
+                "Cân nặng của " + adam.getName() + " là: " + adam.getWeight() + " đơn vị";
+        } else {
+            eva.eatApple(apple1);
+            document.getElementById("result").innerHTML = "Quả táo còn: " + apple1.getWeight() + " đơn vị" + "<br>" +
+                "Cân nặng của " + eva.getName() + " là: " + eva.getWeight() + " đơn vị";
+        }
+    }
+</script>
