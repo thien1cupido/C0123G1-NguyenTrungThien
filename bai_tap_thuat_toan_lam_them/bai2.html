@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai2</title>
+</head>
+<body>
+<script>
+    let demChan = 0, demLe = 0;
+    let n = +prompt("Nhap do dai phan tu trong mang");
+    let arr = [];
+    for (let i = 0; i < n; i++) {
+        arr[i] = +prompt("Nhap phan tu");
+        if (i % 2 === 0) {
+            demChan++;
+        } else {
+            demLe++;
+        }
+    }
+    if (demLe === demChan) {
+        alert("OK");
+    } else {
+        alert("NO");
+    }
+</script>
+</body>
+</html>

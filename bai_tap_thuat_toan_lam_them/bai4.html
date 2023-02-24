@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai4</title>
+</head>
+<body>
+<script>
+    let n = parseInt(+prompt("Nhap do dai phan tu trong mang"));
+    let arr = [];
+    for (let i = 0; i < n; i++) {
+        arr[i] = +prompt("Nhap phan tu");
+    }
+    document.write("Mang arr = [ " + arr + " ]" + "<br>");
+    let array = [];
+    for (let i = arr.length - 1; i >= 0; i--) {
+        array.push(arr[i]);
+    }
+    if (array === arr) {
+        alert("OK");
+    } else {
+        alert("NO");
+    }
+</script>
+</body>
+</html>

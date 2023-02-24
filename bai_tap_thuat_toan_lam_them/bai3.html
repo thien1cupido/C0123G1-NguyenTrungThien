@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+<script>
+    let n = +prompt("Nhap do dai phan tu trong mang");
+    let arr = [];
+    for (let i = 0; i < n; i++) {
+        arr[i] = +prompt("Nhap phan tu");
+
+    }
+    document.write("Mang arr = [ " + arr + " ]" + "<br>");
+    document.write(checkIncreaseAndDecrease(arr));
+
+    function checkIncreaseAndDecrease(arr) {
+        let count1 = 0;
+        let count2 = 0;
+        let kc1 = arr[1] - arr[0];
+        let kc2 = arr[0] - arr[1];
+        for (let i = 0; i < arr.length; i++) {
+            if ((arr[i + 1] - arr[i]) === kc1) {
+                count1++;
+            }
+            if ((arr[i] - arr[i + 1]) === kc2) {
+                count2++;
+            }
+            if (arr[i] === arr[i + 1]) {
+                return false;
+            }
+        }
+        if (count1 === (arr.length - 1) || count2 === (arr.length - 1)) {
+
+            return true;
+        } else {
+            return false;
+        }
+    }
+</script>
+</body>
+</html>
