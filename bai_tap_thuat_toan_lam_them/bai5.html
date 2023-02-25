@@ -6,11 +6,19 @@
 </head>
 <body>
 <script>
-    while ( )
-        let n = parseInt(+prompt("Nhap do dai phan tu trong mang"));
+    let n =+prompt("Nhap do dai phan tu trong mang");
     let arr = [];
     for (let i = 0; i < n; i++) {
-        arr[i] = +prompt("Nhap phan tu");
+        let checkExist;
+        let e;
+        do {
+            checkExist = false;
+            e = prompt("Nhap phan tu thu " + i);
+            if (arr.indexOf(e) === -1) {
+                checkExist = true;
+            }
+        } while (!checkExist);
+        arr.push(e);
     }
     document.write("Mang arr = [ " + arr + " ]" + "<br>");
 </script>
