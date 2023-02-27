@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2-task3</title>
+</head>
+<body>
+<script>
+    let a=[1,2,3,5,6,8,2];
+    let b=[5,7,1,2,3,9,0,23,12];
+    let c = [];
+    for (let i = 0; i < b.length; i++) {
+        let flag=true;
+        for (let j = 0; j < a.length; j++) {
+            if (a[j] === b[i]) {
+                flag=false;
+                break;
+            }
+        }
+        if (flag){
+            c.push(b[i]);
+        }
+    }
+    document.write("mảng A=[ "+a+"]"+"<br>");
+    document.write("mảng B=[ "+b+"]"+"<br>");
+    document.write("Các phần tử chỉ xuất hiện ở mảng b là "+c);
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt('Nhap gia tri N'));
+    for (let i = 0; i < n; i++) {
+        for (let j = n - 1; j > i; j--) {
+            document.write("&nbsp;&nbsp;");
+        }
+        for (let k = 0; k < (i + 1) * 2 - 1; k++) {
+            document.write("*");
+        }
+        document.writeln("<br>");
+    }
+</script>
+</body>
+</html>

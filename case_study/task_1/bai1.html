@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1</title>
+</head>
+<body>
+<div>
+    <label for="nhapTien">Nhập tiền</label><br>
+    <input  id="nhapTien" type="number">Triệu VNĐ<br>
+    <button type="button" onclick="tinhLuongVaThue()">Tính</button>
+    <p id="result"></p>
+</div>
+<script>
+    function tinhLuongVaThue() {
+        let nhapLuong= +document.getElementById("nhapTien").value;
+        let tienThue=0
+        let luongRong=0;
+        if  (nhapLuong>=15){
+            tienThue=(nhapLuong*20)/100;
+            luongRong=nhapLuong-tienThue;
+        }else if (nhapLuong>=7){
+            tienThue=(nhapLuong*10)/100;
+            luongRong=nhapLuong-tienThue;
+        }else if (nhapLuong>0){
+            tienThue=(nhapLuong*5)/100;
+            luongRong=nhapLuong-tienThue;
+        }else {
+            alert("Xin mời nhập lại");
+        }
+        document.getElementById("result").innerText ="Tiền lương ròng= "+luongRong+" t  riệu VNĐ."+" Tiền thuế phải nộp là "+tienThue+" triệu VNĐ";
+    }
+</script>
+</body>
+</html>
