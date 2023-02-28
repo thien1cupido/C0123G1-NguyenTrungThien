@@ -2,9 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>bai1-task3</title>
+    <title>bai1-task5</title>
 </head>
 <body>
+<script>
+    let arr = [];
+    let n = +prompt("Độ dài của n");
+    let m = +prompt("Độ dài của m");
+    for (let i = 0; i < n; i++) {
+        arr[i] = [];
+        for (let j = 0; j < m; j++) {
+            arr[i][j] = +prompt("Nhập phần tử của matrix");
+        }
+    }
+    document.write("Các phần tử trong matrix " + arr + "<br>");
 
+    goiPhanTuChanTrongMatrix(arr);
+
+    function goiPhanTuChanTrongMatrix(arr) {
+        let sum = 0;
+        for (let i = 0; i < n; i++) {
+            for (let j = 0; j < m; j++) {
+                if (arr[i][j] % 2 === 0) {
+                    sum += arr[i][j];
+                }
+            }
+        }
+        document.write("Tổng các phần tử chẵn trong matrix là " + sum);
+    }
+</script>
 </body>
 </html>

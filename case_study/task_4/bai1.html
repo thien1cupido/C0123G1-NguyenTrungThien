@@ -5,6 +5,52 @@
     <title>bai1-task3</title>
 </head>
 <body>
+<script>
+    let nhapXau = prompt("Nhap xau k tu");
+    let arr = nhapXau;
+    let arr1 = nhapXau;
+    arr = arr.trim().toLowerCase().split("");
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === " " && arr[i + 1] === " ") {
+            for (let j = i + 1; j < arr.length; j++) {
+                arr[j] = arr[j + 1];
+            }
+            i--;
+        }
+    }
+    for (let k = 0; k < arr.length; k++) {
+        arr[0] = arr[0].toUpperCase();
+        if (arr[k] === " ") {
+            arr[k + 1] = arr[k + 1].toUpperCase();
+        }
+    }
+    document.write("Xâu nhập vào là: " + nhapXau + "<br>");
+    document.write("Xâu đã sửa là: " + arr.join("") + "<br>");
+    document.write("Từ dài nhất trong xâu là '" + xuatTuDaiNhat(arr1) + "', số lượng từ trong xâu đó là = " + demTuDaiNhat(arr1));
 
+    function demTuDaiNhat(arr1) {
+        let arr = arr1.split(" ");
+        let maxLength = 0;
+        for (let l = 0; l < arr.length; l++) {
+            if (arr[l].length > maxLength) {
+                maxLength = arr[l].length;
+            }
+        }
+        return maxLength;
+    }
+
+    function xuatTuDaiNhat(arr1) {
+        let arr = arr1.split(" ");
+        let maxLength = 0;
+        let word = 0;
+        for (let l = 0; l < arr.length; l++) {
+            if (arr[l].length > maxLength) {
+                maxLength = arr[l].length;
+                word = arr[l];
+            }
+        }
+        return word.replace(word.charAt(0), word.charAt(0).toUpperCase());
+    }
+</script>
 </body>
 </html>

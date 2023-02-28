@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2-task5</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let n = +prompt("Độ dài của n");
+    let m = +prompt("Độ dài của m");
+    for (let i = 0; i < n; i++) {
+        arr[i] = [];
+        for (let j = 0; j < m; j++) {
+            arr[i][j] = +prompt("Nhập phần tử của matrix");
+        }
+    }
+    document.write("Các số trong matrix là= " + arr + "<br>");
+    demSoNguyenTo(arr);
+
+    function demSoNguyenTo(arr) {
+        let demSoNguyenTo = 0;
+        let dem = 0;
+        let newArr = [];
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                for (let k = 1; k <= arr[i][j]; k++) {
+                    if (arr[i][j] % k === 0) {
+                        dem += 1;
+                    }
+                }
+                if (dem === 2) {
+                    newArr.push(arr[i][j]);
+                    demSoNguyenTo++;
+                }
+                dem = 0;
+            }
+        }
+        document.write("Các số nguyên tố trong matrix là= " + newArr + "<br>"+" Số lượng số nguyên tố trong matrix là= " + demSoNguyenTo);
+    }
+</script>
+</body>
+</html>

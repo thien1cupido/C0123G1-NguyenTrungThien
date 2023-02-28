@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2-task4</title>
+</head>
+<body>
+<script>
+    let nhapXau = prompt("Nhap xau k tu");
+    let arr = nhapXau.trim().split("");
+    let newArr = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (newArr.indexOf(arr[i]) === -1 && arr[i]!==" ") {
+            newArr.push(arr[i]);
+        }
+    }
+    document.write("ki tu nhap vao la= '"+arr.join("")+"'"+"<br>");
+    document.write("s= '"+newArr.join("")+"'"+" ,so luong ki tu khac nhau la "+newArr.length);
+</script>
+</body>
+</html>

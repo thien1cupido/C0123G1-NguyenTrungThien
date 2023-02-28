@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3-task4</title>
+</head>
+<body>
+<script>
+    let nhapXau1 = prompt("Nhap xau k tu");
+    let a= nhapXau1.trim().split("");
+    let nhapXau2 = prompt("Nhap xau k tu");
+    let b = nhapXau2.trim().split("");
+    let c = [];
+    let d=[];
+    for (let i = 0; i < b.length; i++) {
+        for (let j = 0; j <a.length ; j++) {
+            if (b[i]===a[j]){
+             c.push(b[i]);
+            }
+        }
+    }
+    for (let k = 0; k < c.length; k++) {
+        if (d.indexOf(c[k]) === -1) {
+            d.push(c[k]);
+        }
+    }
+    document.write("s1= '"+a.join("")+"'"+"<br>");
+    document.write("s2= '"+b.join("")+"'"+"<br>");
+    document.write("ki tu chung giua s1 va s2 la s3= "+d+"<br>");
+</script>
+</body>
+</html>

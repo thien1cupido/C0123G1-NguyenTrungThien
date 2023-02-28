@@ -6,11 +6,29 @@
 </head>
 <body>
 <h3>Menu</h3>
+<button type="button" onclick="callMenu(menu,priceMoney)">Tính</button><br>
 <script>
+    let menu = ["Cafe", "Cam vắt", "Nước ép cà rốt", "Nước ép cà chua", "Nước lọc", "Nước dừa", "Thoát gọi món"];
+    let priceMoney = [10000, 15000, 17000, 13000, 5000, 20000];
+    for (let i = 0; i < menu.length; i++) {
+        document.write((i + 1) + ". " + menu[i] + "<br>");
+    }
 
-   let menu=["Cafe","Cam vắt","Nước ép cà rốt","Nước ép cà chua","Nước lọc","Nước dừa","Thoát gọi món"];
-    for (let i = 0; i <menu.length; i++) {
-        document.write((i+1)+"."+menu[i]+"<br>");
+    function callMenu(menu, priceMoney) {
+        let numericalOrder;
+        do {
+            numericalOrder = +prompt("Nhập số thứ tự");
+            let payment = 0;
+            for (let i = 0; i < priceMoney.length; i++) {
+                if (numericalOrder === i + 1) {
+                    alert("Giá của " + menu[i] + " bạn chọn là: " + priceMoney[i]);
+                    let quanlity = +prompt("Nhập số lượng");
+                    payment = quanlity * priceMoney[i];
+                    alert("Tổng số tiền người dùng cần trả là: " + payment);
+                }
+            }
+        } while (numericalOrder !== menu.length)
+        alert("Bạn đã dừng gọi món:");
     }
 </script>
 </body>
