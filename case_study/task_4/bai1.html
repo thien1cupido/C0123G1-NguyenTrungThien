@@ -26,18 +26,7 @@
     }
     document.write("Xâu nhập vào là: " + nhapXau + "<br>");
     document.write("Xâu đã sửa là: " + arr.join("") + "<br>");
-    document.write("Từ dài nhất trong xâu là '" + xuatTuDaiNhat(arr1) + "', số lượng từ trong xâu đó là = " + demTuDaiNhat(arr1));
-
-    function demTuDaiNhat(arr1) {
-        let arr = arr1.split(" ");
-        let maxLength = 0;
-        for (let l = 0; l < arr.length; l++) {
-            if (arr[l].length > maxLength) {
-                maxLength = arr[l].length;
-            }
-        }
-        return maxLength;
-    }
+    document.write("Từ dài nhất trong xâu là '" + xuatTuDaiNhat(arr1) + "', số lượng từ trong xâu đó là = " + xuatTuDaiNhat(arr1).length);
 
     function xuatTuDaiNhat(arr1) {
         let arr = arr1.split(" ");
